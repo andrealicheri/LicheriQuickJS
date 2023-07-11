@@ -1,2 +1,2 @@
-# HTMX-Bootstrap stack
+# Web Stack
 This is for my personal use only.
