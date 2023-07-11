@@ -1,5 +1,6 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   entry: './source.js',
@@ -31,6 +32,10 @@ module.exports = {
             drop_console: true,
           },
         },
+      }),
+      new CompressionPlugin({
+        test: /\.js(\?.*)?$/i,
+        algorithm: "brotliCompress",
       }),
     ],
   },
