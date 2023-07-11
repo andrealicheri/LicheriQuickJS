@@ -35,7 +35,6 @@ module.exports = {
       }),
       new CompressionPlugin({
         test: /\.js(\?.*)?$/i,
-        algorithm: "brotliCompress",
       }),
     ],
   },
